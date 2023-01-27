@@ -134,16 +134,16 @@ export default function BoardWrite(props: IBoardWriteProps): JSX.Element {
   };
 
   const onClickSubmit = async (): Promise<void> => {
-    if (writer !== "") {
+    if (writer === "") {
       setWriterError("작성자를 입력해주세요.");
     }
-    if (password !== "") {
+    if (password === "") {
       setPasswordError("비밀번호를 입력해주세요.");
     }
-    if (title !== "") {
+    if (title === "") {
       setTitleError("제목을 입력해주세요.");
     }
-    if (contents !== "") {
+    if (contents === "") {
       setContentsError("내용을 입력해주세요.");
     }
     if (writer !== "" && password !== "" && title !== "" && contents !== "") {
@@ -254,7 +254,6 @@ export default function BoardWrite(props: IBoardWriteProps): JSX.Element {
       isOpen={isOpen}
       zipcode={zipcode}
       address={address}
-      addressDetail={addressDetail}
     />
   );
 }

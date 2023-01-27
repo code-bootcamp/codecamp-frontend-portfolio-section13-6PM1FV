@@ -27,7 +27,6 @@ export interface IBoardWriteUIProps {
   isOpen: boolean;
   zipcode: string;
   address: string;
-  addressDetail: string;
 }
 
 export interface ISubmitButtonProps {
